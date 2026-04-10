@@ -1,0 +1,33 @@
+
+name: email-triage-env
+version: "1.0.0"
+description: >
+  An RL environment where AI agents learn to triage support emails
+  by classifying urgency, category, and reply tone.
+author: mehaksaini94
+tasks:
+  - name: easy
+    description: Classify 3 emails by urgency, category, and tone
+    difficulty: easy
+    max_steps: 3
+  - name: medium
+    description: Classify 5 emails with more subtle signals
+    difficulty: medium
+    max_steps: 5
+  - name: hard
+    description: Classify 10 emails with complex mixed signals
+    difficulty: hard
+    max_steps: 10
+action_space:
+  urgency: "urgent | not_urgent"
+  category: "billing | technical | general | complaint"
+  tone: "formal | empathetic | urgent"
+observation_space:
+  email_subject: string
+  email_body: string
+  task_name: string
+  step_number: integer
+  total_emails: integer
+  last_reward: float
+  done: boolean
+  feedback: string
