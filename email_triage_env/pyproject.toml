@@ -12,9 +12,12 @@ dependencies = [
     "python-multipart",
 ]
 
+[project.scripts]
+server = "app:app"
+
 [project.urls]
 Homepage = "https://huggingface.co/spaces/mhk-s/email-triage-env"
 
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=68"]
 build-backend = "setuptools.backends.legacy:BuildBackend"
