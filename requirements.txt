@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+openenv-core
+openai
+requests
